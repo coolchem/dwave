@@ -1,2 +1,4 @@
-Dwave- POC App with Angular, Express and Mongodb
+Dwave
 =====
+
+POC App with Angular, Express and Mongodb
