@@ -1,0 +1,16 @@
+
+<div class="row extramargin" >
+    <ul class="nav nav-pills pull-left">
+        <li ng-class="{active: $routeSegment.contains('eventsList')}">
+            <a href="#/events">Events</a>
+        </li>
+        <li ng-hide="!$rootScope.isUserLoggedin" ng-class="{active: $routeSegment.contains('myevents')}"><a href="#/events/myevents">My Events</a></li>
+    </ul>
+    <button class="btn btn-xs btn-info pull-right" ng-show="$rootScope.isUserLoggedin"  ng-click="$location.path('/events/create')">Create Event</button>
+</div>
+
+
+
+
+<div class="row extramargin anim" app-view-segment="1">
+</div>

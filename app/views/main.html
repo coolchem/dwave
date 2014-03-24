@@ -1,0 +1,31 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Village Volunteers</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: $routeSegment.startsWith('home')}"><a  href="#/home">Home</a></li>
+                <li ng-class="{active: $routeSegment.startsWith('events')}"><a  href="#/events">Events</a></li>
+                <li ng-class="{active: $routeSegment.startsWith('about')}"><a  href="#/about">About us</a></li>
+                <li ng-class="{active: $routeSegment.startsWith('contacts')}"><a  href="#/contacts">Contact us</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li  ng-show="$rootScope.isUserLoggedin" ng-click="logout()"><a>Sign Out</a></li>
+                <li ng-class="{active: $routeSegment.startsWith('login')}" ng-hide="$rootScope.isUserLoggedin"><a  href="#/login">Login/Register</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container anim" app-view-segment="1">
+</div>
+
+
+

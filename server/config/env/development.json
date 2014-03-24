@@ -1,0 +1,8 @@
+{
+    "db": "mongodb://localhost/dwave-dev",
+    "app": {
+        "name": "dwave",
+        "public": "../app"
+    }
+
+}

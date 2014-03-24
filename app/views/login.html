@@ -1,0 +1,24 @@
+<div class="row">
+        <form name="loginForm" class="form-signin col-md-6 col-md-offset-3  ">
+            <h4 class="form-signin-heading">Sign in</h4>
+            <div class="input-group">
+                <input id="inputEmail1" type="text" class="form-control" ng-model="user.username" placeholder="Username" required>
+                <span class="input-group-addon">@davita.com</span>
+            </div>
+            <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required>
+            <button class="btn btn-small btn-info" ng-disabled="loginForm.$invalid" ng-click="login()">Sign in</button>
+
+
+        </form>
+
+
+
+    <div class=" col-md-6 col-md-offset-3 ">
+        <div class="pull-left">
+            Are you a New User? <button class="btn btn-xs btn-danger" ng-click="$location.path('/register')">Sign up</button>
+
+        </div>
+    </div>
+</div>
+
+

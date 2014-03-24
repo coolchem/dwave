@@ -1,0 +1,7 @@
+{
+    "db": "mongodb://dwaveuser:dwaveuser@ds045588.mongolab.com:45588/dwave-dev",
+    "app": {
+        "name": "dwave",
+        "public": "../dist"
+    }
+}

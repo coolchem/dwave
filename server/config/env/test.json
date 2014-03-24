@@ -1,0 +1,9 @@
+{
+    "db": "mongodb://dwaveuser:dwaveuser@ds045588.mongolab.com:45588/dwave-dev",
+    "port": 3001,
+    "app": {
+        "name": "dwave - Test",
+        "public": "../app"
+
+    }
+}

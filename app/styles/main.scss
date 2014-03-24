@@ -1,0 +1,410 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+
+@import "../bower_components/foundation/variables";
+// Foundation Components
+@import "../bower_components/foundation/components/global";
+
+@import "../bower_components/foundation/components/grid";
+
+@import "../bower_components/foundation/components/visibility";
+
+
+
+
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'falconIcons';
+  src: url("fonts/falconIcons.eot");
+  src: url("fonts/falconIcons.eot") format("embedded-opentype"), url("fonts/falconIcons.woff") format("woff"), url("fonts/falconIcons.ttf") format("truetype"), url("../fonts/falconIcons.svg#falconIcons") format("svg");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'lato';
+  src: url("fonts/Lato-Reg.ttf");
+  src: url("fonts/Lato-Reg.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'lato';
+  src: url("fonts/Lato-Bol.ttfttf");
+  src: url("fonts/Lato-Bol.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'droidSans';
+  src: url("fonts/DroidSans.ttf");
+  src: url("fonts/DroidSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'droidSans';
+  src: url("fonts/DroidSans-Bold.ttf");
+  src: url("fonts/DroidSans-Bold.ttf") format("truetype");
+}
+
+
+$small-screen: emCalc(800);
+$medium-screen: emCalc(1280);
+$large-screen: emCalc(1440);
+
+$screen: "only screen";
+
+$small: "only screen and (min-width:" #{$small-screen} ")";
+$medium: "only screen and (min-width:" #{$medium-screen} ")";
+$large: "only screen and (min-width:" #{$large-screen} ")";
+
+$smallMax: "only screen and (max-width:" #{$small-screen} ")";
+$mediumMax: "only screen and (max-width:" #{$medium-screen} ")";
+$largeMax: "only screen and (max-width:" #{$large-screen} ")";
+
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
+$headerHeight: emCalc(80);
+$controlBarHeight: emCalc(36);
+$tabBarHeight: emCalc(36);
+$iconholderWidthDefault: emCalc(36);
+
+$base-background-color: #f4f5f4;
+$base-background-blue: #215267;
+$base-background-green: #98B52B;
+$base-background-red: #EE5438;
+$base-background-red: #EE5438;
+$base-background-brown: #3d3733;
+
+$base-color-font: #393939;
+$base-color-font-blue: #0D4D6C;
+$base-color-font-semiWhite: #f4f5f4;
+$base-color-font-grey: #898989;
+
+article, aside, details, figcaption, figure, footer, logoContainer, mainHeader,mainNav,footerNav, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'droidSans', 'lato', 'helvetica', 'arial', sans-serif;
+}
+
+
+body {
+  font-family: 'droidSans', 'lato', 'helvetica', 'arial', sans-serif;
+  line-height: emCalc(24);
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+a
+{
+  text-decoration: none;
+}
+
+
+.d-container{
+    top: 0;
+    width: 100%;
+}
+
+
+
+.mainHeader
+{
+  width: 100%;
+  padding-top: emCalc(10);
+  padding-bottom: emCalc(10);
+  height: $headerHeight;
+  background-color: $base-background-color;
+  padding-left: emCalc(10);
+  padding-right: emCalc(10);
+  text-align: center;
+
+  a {
+    color: $base-color-font;
+    margin-right: emCalc(5);
+    font-size: emCalc(14);
+    cursor: pointer;
+
+  }
+
+}
+.mainHeader-right {
+  float: right !important;
+}
+
+.mainHeader-left {
+  float: left !important;
+}
+
+
+.logo
+{
+     height: emCalc(25);
+     a{
+       text-decoration: none;
+       font-size: emCalc(18);
+     }
+}
+
+.mainNav
+{
+    padding-top: emCalc(10);
+
+  a {
+    display: inline-block;
+    line-height: emCalc(24);
+    font-size: emCalc(13);
+    margin-left: emCalc(15);
+    color: $base-color-font;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+
+      text-decoration: none;
+      color: $base-color-font;
+      border-bottom: 2px solid $base-background-red;
+    }
+  }
+
+
+
+  a.active
+  {
+    color: $base-color-font;
+    border-bottom: 2px solid $base-background-red;
+  }
+}
+
+.footerNav
+{
+  padding-top: emCalc(10);
+
+}
+
+.footerNavItem
+{
+  display: block;
+  a {
+    line-height: emCalc(24);
+    font-size: emCalc(13);
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+
+      text-decoration: none;
+      border-bottom: 2px solid $base-background-red;
+    }
+  }
+
+
+
+  a.active
+  {
+    border-bottom: 2px solid $base-background-red;
+  }
+}
+
+
+
+.mainContainer
+{
+  width: 100%;
+  padding-top: $headerHeight;
+  margin: 0 auto;
+}
+
+.loginContainer
+{
+  display: block;
+}
+
+.qoutesContainer
+{
+    color: #ffffff;
+}
+
+.smallImageHolder
+{
+  vertical-align:middle;
+
+  height:140px;
+  width:140px;
+
+  text-align: center;
+  margin: 0 auto;
+
+  img
+  {
+    width: auto;
+    height:140px;
+  }
+
+}
+
+
+.splash {
+   padding: 1.5em 0 1em;
+   text-align: center;
+   background-color: #54c7ea;
+ }
+
+.splash-base-color {
+  background-color: $base-background-color;
+}
+
+.splash-color-brown {
+  background-color: $base-background-brown;
+}
+
+.form-signin {
+  padding: 15px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.anim.ng-enter {
+  transition: opacity 1s;
+  opacity: 0.0;
+}
+
+.anim.ng-enter-active {
+  opacity: 1.0;
+}
+.anim.ng-leave {
+  display: none;
+}
+
+.row.extramargin {margin-top: emCalc(10)!important; margin-bottom: emCalc(10)!important;}
+
+.nav-pills
+{
+  padding-left: emCalc(5);
+  padding-right: emCalc(5);
+}
+
+.eventsList
+{
+  padding-left: emCalc(5);
+  padding-right: emCalc(5);
+}
+
+.carousel-inner
+{
+  background-color: #000000;
+}
+
+.peopleCarouselImg
+{
+
+  height:emCalc(300);
+
+  img {
+    vertical-align:middle;
+    width: auto;
+    height:emCalc(300);
+    max-height: emCalc(300);
+    margin: 0 auto;
+    text-align: center;
+
+  }
+}
+
+
+
+/* We use this media query to add styles to any device that supports media queries */
+@media #{$screen} {
+
+  body{
+    font-size: 85%;
+  }
+}
+
+@media #{$small} {
+
+  body{
+    font-size: 100%;
+  }
+
+  .mainNav
+  {
+
+    a {
+      display: inline-block;
+      line-height: emCalc(24);
+      font-size: 80%;
+    }
+  }
+}
+
+/* Used to alter styles for screens at least 1280px wide. */
+@media #{$medium} {
+
+}
+
+/* Used to alter styles for screens at least 1440px wide. */
+@media #{$large} {
+}
+
+/* Apply styles to screens in landscape orientation */
+@media #{$landscape} {
+}
+
+/* Apply styles to screens in portrait orientation */
+@media #{$portrait} {
+
+}
+
+@media #{$mediumMax} {
+
+}
+
+
+
+
